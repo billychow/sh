@@ -44,8 +44,9 @@ rbenv rehash
 gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
 
 
-# setup nodejs
+# setup nodejs & nvm
 sudo apt-get -y install npm
+wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
 
 echo -e '\n' >> ~/.bashrc
 echo 'export PS1="\u@\H:\w$ "' >> ~/.bashrc
