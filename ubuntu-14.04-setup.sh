@@ -15,6 +15,7 @@ sudo apt-get -y install memcached mongodb redis-server imagemagick
 
 # setup pyenv & python
 git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+echo -e '\n' >> ~/.bashrc
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
@@ -31,6 +32,7 @@ pip install sae-python-dev
 # setup rbenv & ruby-build
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo -e '\n' >> ~/.bashrc
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 exec $SHELL
@@ -44,3 +46,6 @@ gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
 
 # setup nodejs
 sudo apt-get -y install npm
+
+echo -e '\n' >> ~/.bashrc
+echo 'export PS1="\u@\H:\w$ "' >> ~/.bashrc
