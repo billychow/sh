@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt-get -y update && sudo apt-get -y upgrade
 sudo apt-get -y install build-essential subversion git
-sudo apt-get -y install tmux screen proxychains indicator-multiload hamster-indicator indicator-china-weather
+sudo apt-get -y install tmux screen proxychains indicator-multiload hamster-indicator indicator-china-weather ibus-googlepinyin ibus-table-wubi
 sudo apt-get -y install p7zip-full rar unrar chromium-browser filezilla
 
 # setup vim
