@@ -1,4 +1,5 @@
 #!/bin/bash
+
 sudo apt-get -y update && sudo apt-get -y upgrade
 sudo apt-get -y install build-essential subversion git
 sudo apt-get -y install tmux screen proxychains indicator-multiload hamster-indicator indicator-china-weather ibus-googlepinyin ibus-table-wubi
@@ -47,6 +48,3 @@ gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
 # setup nodejs & nvm
 sudo apt-get -y install npm
 wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
-
-echo -e '\n' >> ~/.bashrc
-echo 'export PS1="\u@\H:\w$ "' >> ~/.bashrc
