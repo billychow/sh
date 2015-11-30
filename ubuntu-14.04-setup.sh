@@ -9,7 +9,7 @@ sudo apt-get -y install p7zip-full rar unrar chromium-browser filezilla
 sudo apt-get -y install vim-gnome
 git clone https://github.com/billychow/.vim.git
 mkdir -p ~/.vim/bundle
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # development tools
 sudo apt-get -y install memcached mongodb redis-server imagemagick
