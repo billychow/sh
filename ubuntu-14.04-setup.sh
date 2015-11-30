@@ -29,7 +29,6 @@ pyenv rehash
 pip install tornado==2.1.1
 pip install sae-python-dev
 
-
 # setup rbenv & ruby-build
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
@@ -43,7 +42,6 @@ rbenv global 2.2.3
 rbenv rehash
 # setup mirror for gem source
 gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
-
 
 # setup nodejs & nvm
 sudo apt-get -y install npm
