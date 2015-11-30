@@ -10,6 +10,10 @@ sudo apt-get -y install vim-gnome
 git clone https://github.com/billychow/.vim.git
 mkdir -p ~/.vim/bundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# install powerline fonts
+git clone https://github.com/powerline/fonts.git ~/.vim/fonts
+~/.vim/fonts/install.sh
+rm -rf ~/.vim/fonts
 
 # development tools
 sudo apt-get -y install memcached mongodb redis-server imagemagick
