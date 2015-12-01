@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 sudo apt-get -y update && sudo apt-get -y upgrade
 sudo apt-get -y install build-essential subversion git httpie proxychains
@@ -14,6 +14,33 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git clone https://github.com/powerline/fonts.git ~/.vim/fonts
 ~/.vim/fonts/install.sh
 rm -rf ~/.vim/fonts
+
+# setup sublime text
+cd ~/Downloads
+wget http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2%20x64.tar.bz2
+tar xf Sublime\ Text\ 2.0.2\ x64.tar.bz2
+sudo mv Sublime\ Text\ 2 /opt/
+sudo ln -s /opt/Sublime\ Text\ 2/sublime_text /usr/local/bin/sublime
+sudo cat <<EOD > /usr/share/applications/sublime.desktop
+[Desktop Entry]
+Version=1.0
+Name=Sublime Text 2
+GenericName=Text Editor
+
+Exec=sublime
+Terminal=false
+Icon=/opt/Sublime Text 2/Icon/48x48/sublime_text.png
+Type=Application
+Categories=TextEditor;IDE;Development
+X-Ayatana-Desktop-Shortcuts=NewWindow
+
+[NewWindow Shortcut Group]
+Name=New Window
+Exec=sublime -n
+TargetEnvironment=Unity
+EOD
+#sudo sublime /usr/share/applications/defaults.list
+
 
 # development tools
 sudo apt-get -y install memcached mongodb redis-server imagemagick
