@@ -43,7 +43,7 @@ EOD
 sudo sed -i "s/gedit.desktop/sublime.desktop/g" /usr/share/applications/defaults.list
 
 # development tools
-sudo apt-get -y install memcached mongodb redis-server imagemagick
+sudo apt-get -y install memcached mongodb redis-server imagemagick openjdk-7-jdk
 
 # setup pyenv & python
 git clone https://github.com/yyuu/pyenv.git ~/.pyenv
