@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 
 sudo -u root apt-get -y update && sudo -u root apt-get -y upgrade
-sudo -u root apt-get -y install build-essential subversion git httpie proxychains
-sudo -u root apt-get -y install tmux screen proxychains indicator-multiload hamster-indicator indicator-china-weather ibus-googlepinyin ibus-table-wubi
-sudo -u root apt-get -y install p7zip-full rar unrar chromium-browser filezilla
+sudo -u root apt-get -y install build-essential subversion git vim-gnome \
+                                tmux screen proxychains indicator-multiload hamster-indicator indicator-china-weather \
+                                ibus-googlepinyin ibus-table-wubi \
+                                p7zip-full rar unrar chromium-browser filezilla \
+                                npm memcached mongodb redis-server imagemagick openjdk-7-jdk httpie \
+                                libreadline-dev libbz2-dev libsqlite3-dev
 
 # setup vim
-sudo -u root apt-get -y install vim-gnome
 git clone https://github.com/billychow/.vim.git
 mkdir -p ~/.vim/bundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -42,9 +44,6 @@ EOD
 # set sublime as default text-editor in stead of gedit
 sudo -u root sed -i "s/gedit.desktop/sublime.desktop/g" /usr/share/applications/defaults.list
 
-# development tools
-sudo -u root apt-get -y install memcached mongodb redis-server imagemagick openjdk-7-jdk
-
 # setup pyenv & python
 git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 echo -e '\n' >> ~/.bashrc
@@ -52,7 +51,6 @@ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 exec $SHELL
-sudo -u root apt-get -y install libreadline-dev libbz2-dev libsqlite3-dev
 pyenv install 2.7.10
 pyenv global 2.7.10
 pyenv rehash
@@ -67,13 +65,11 @@ echo -e '\n' >> ~/.bashrc
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 exec $SHELL
-sudo -u root apt-get install -y libreadline-dev
 rbenv install 2.2.3
 rbenv global 2.2.3
 rbenv rehash
 # setup mirror for gem source
 gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
 
-# setup nodejs & nvm
-sudo -u root apt-get -y install npm
+# setup nvm
 wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
