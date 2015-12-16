@@ -11,7 +11,7 @@ yum -y install epel-release
 yum -y install tmux screen subversion git bash-completion fail2ban iptables-services \
                php-cli php-devel php-fpm php-mbstring php-mysqlnd \
                php-apc php-memcache php-redis php-gd php-mcrypt \
-               mariadb-server ruby pygpgme curl
+               mariadb-server ruby pygpgme curl zlib-devel openssl-devel
 
 gem install bundler --no-rdoc --no-ri
 curl --fail -sSLo /etc/yum.repos.d/passenger.repo https://oss-binaries.phusionpassenger.com/yum/definitions/el-passenger.repo
