@@ -8,7 +8,7 @@ wget http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 rpm -Uvh remi-release-7.rpm
 yum -y groupinstall 'Development Tools'
 yum -y install epel-release
-yum -y install tmux screen subversion git bash-completion \
+yum -y install tmux screen subversion git bash-completion fail2ban \
                php-cli php-devel php-fpm php-mbstring php-mysqlnd \
                php-apc php-memcache php-redis \
                mariadb-server ruby pygpgme curl
@@ -16,6 +16,9 @@ yum -y install tmux screen subversion git bash-completion \
 gem install bundler --no-rdoc --no-ri
 curl --fail -sSLo /etc/yum.repos.d/passenger.repo https://oss-binaries.phusionpassenger.com/yum/definitions/el-passenger.repo
 yum -y install nginx passenger
+
+systemctl enable fail2ban.service
+systemctl start fail2ban.service
 
 systemctl enable mariadb.service
 systemctl start mariadb.service
