@@ -6,7 +6,7 @@ sudo -u root apt-get -y install build-essential subversion git vim-gnome zsh \
                                 ibus-googlepinyin ibus-table-wubi \
                                 p7zip-full rar unrar chromium-browser filezilla \
                                 npm memcached mongodb redis-server imagemagick openjdk-7-jdk httpie \
-                                libreadline-dev libbz2-dev libsqlite3-dev
+                                libreadline-dev libbz2-dev libsqlite3-dev libmysqlclient-dev libmagickwand-dev
 
 # setup vim
 git clone https://github.com/billychow/.vim.git
