@@ -2,7 +2,7 @@
 
 sudo -u root apt-get -y update && sudo -u root apt-get -y upgrade
 sudo -u root apt-get -y install build-essential subversion git vim-gnome zsh \
-                                tmux screen proxychains indicator-multiload hamster-indicator indicator-china-weather \
+                                tmux screen proxychains privoxy indicator-multiload hamster-indicator indicator-china-weather \
                                 ibus-googlepinyin ibus-table-wubi \
                                 p7zip-full rar unrar chromium-browser filezilla \
                                 npm memcached mongodb redis-server imagemagick openjdk-7-jdk httpie \
