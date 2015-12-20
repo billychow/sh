@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # to disable selinux
 yum -y update
