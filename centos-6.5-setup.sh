@@ -10,7 +10,7 @@ yum -y install tmux screen subversion git \
                php-cli php-devel php-fpm php-mbstring php-mysqlnd
                mysql-server mysql-devel nginx passenger \
                ruby ruby-devel rubygems pygpgme curl \
-               ImageMagick-devel postfix mailx
+               ImageMagick-devel postfix mailx alpine
 
 gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
 gem install bundler
