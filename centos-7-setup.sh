@@ -9,7 +9,7 @@ rpm -Uvh remi-release-7.rpm
 yum -y groupinstall 'Development Tools'
 yum -y install epel-release
 wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo && rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
-yum -y install tmux screen subversion git bash-completion fail2ban iptables-services \
+yum -y install tmux screen subversion git bash-completion fail2ban iptables-services bind-utils \
                php-cli php-devel php-fpm php-mbstring php-mysqlnd \
                php-apc php-memcache php-redis php-gd php-mcrypt \
                mariadb-server mariadb-devel ruby ruby-devel ImageMagick-devel java-1.8.0-openjdk \
