@@ -13,7 +13,7 @@ yum -y install tmux screen subversion git bash-completion fail2ban iptables-serv
                php-cli php-devel php-fpm php-mbstring php-mysqlnd \
                php-apc php-memcache php-redis php-gd php-mcrypt \
                mariadb-server mariadb-devel ruby ruby-devel ImageMagick-devel java-1.8.0-openjdk \
-               pygpgme curl zlib-devel openssl-devel postfix mailx alpine jenkins
+               pygpgme curl zlib-devel openssl-devel postfix mailx alpine jenkins python-pip
 
 gem install bundler --no-rdoc --no-ri
 curl --fail -sSLo /etc/yum.repos.d/passenger.repo https://oss-binaries.phusionpassenger.com/yum/definitions/el-passenger.repo
