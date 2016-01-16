@@ -5,6 +5,8 @@ sudo -u root apt-get -y install build-essential subversion git vim-gnome zsh \
                                 tmux screen proxychains privoxy indicator-multiload hamster-indicator indicator-china-weather \
                                 ibus-googlepinyin ibus-table-wubi \
                                 p7zip-full rar unrar chromium-browser filezilla \
+                                nginx php5-cli php5-fpm php5-mcrypt php5-gd php5-imagick php5-mysqlnd php5-xsl \
+                                php5-apc php5-memcache \
                                 npm memcached mongodb redis-server imagemagick openjdk-7-jdk httpie \
                                 libreadline-dev libbz2-dev libsqlite3-dev libmysqlclient-dev libmagickwand-dev
 
