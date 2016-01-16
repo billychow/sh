@@ -50,22 +50,22 @@ sudo -u root sed -i "s/gedit.desktop/sublime.desktop/g" /usr/share/applications/
 # setup rbenv & ruby-build
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-echo -e '\n' >> ~/.bashrc
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+echo -e '\n' >> ~/.{ba,z}shrc
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.{ba,z}shrc
+echo 'eval "$(rbenv init -)"' >> ~/.{ba,z}shrc
 exec $SHELL
 rbenv install 2.2.3
 rbenv global 2.2.3
 rbenv rehash
-# setup mirror for gem source
+# setup mirror of gem source
 gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
 
 # setup pyenv & python
 git clone https://github.com/yyuu/pyenv.git ~/.pyenv
-echo -e '\n' >> ~/.bashrc
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+echo -e '\n' >> ~/.{ba,z}shrc
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.{ba,z}shrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.{ba,z}shrc
+echo 'eval "$(pyenv init -)"' >> ~/.{ba,z}shrc
 exec $SHELL
 pyenv install 2.7.10
 pyenv global 2.7.10
