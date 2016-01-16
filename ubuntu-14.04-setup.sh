@@ -48,6 +48,7 @@ TargetEnvironment=Unity
 EOD
 # set sublime as default text-editor in stead of gedit
 sudo -u root sed -i "s/gedit.desktop/sublime.desktop/g" /usr/share/applications/defaults.list
+sudo -u root sed -i "s/firefox.desktop/chromium-browser/g" /usr/share/applications/defaults.list
 
 # setup rbenv & ruby-build
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
