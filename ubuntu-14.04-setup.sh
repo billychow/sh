@@ -8,6 +8,9 @@ sudo -u root apt-get -y install build-essential subversion git vim-gnome zsh \
                                 npm memcached mongodb redis-server imagemagick openjdk-7-jdk httpie \
                                 libreadline-dev libbz2-dev libsqlite3-dev libmysqlclient-dev libmagickwand-dev
 
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 # setup vim
 git clone https://github.com/billychow/.vim.git
 mkdir -p ~/.vim/bundle
