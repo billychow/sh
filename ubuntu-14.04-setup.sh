@@ -10,6 +10,10 @@ sudo -u root apt-get -y install build-essential subversion git vim-gnome zsh \
                                 npm memcached mongodb redis-server imagemagick openjdk-7-jdk httpie \
                                 libreadline-dev libbz2-dev libsqlite3-dev libmysqlclient-dev libmagickwand-dev
 
+sudo -u root curl -sS https://getcomposer.org/installer | php
+sudo -u root mv composer.phar /usr/local/bin/composer
+sudo -u root chmod 755 /usr/local/bin/composer
+
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -48,7 +52,8 @@ TargetEnvironment=Unity
 EOD
 # set sublime as default text-editor in stead of gedit
 sudo -u root sed -i "s/gedit.desktop/sublime.desktop/g" /usr/share/applications/defaults.list
-sudo -u root sed -i "s/firefox.desktop/chromium-browser/g" /usr/share/applications/defaults.list
+sudo -u root sed -i "s/firefox.desktop/chromium-browser.desktop/g" /usr/share/applications/defaults.list
+cd -
 
 # setup rbenv & ruby-build
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
