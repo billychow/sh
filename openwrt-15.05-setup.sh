@@ -12,7 +12,8 @@ opkg install luci luci-ssl luci-app-ddns \
              screen vim-full git-http patch wget curl hd-idle msmtp rsync \
              diffutils \
              kmod-usb-core kmod-usb2 kmod-usb3 kmod-usb-storage kmod-usb-storage-extras \
-             block-mount kmod-fs-ext4 kmod-fs-exfat kmod-fs-vfat luci-app-samba
+             block-mount kmod-fs-ext4 kmod-fs-exfat kmod-fs-vfat luci-app-samba \
+             kmod-nf-nathelper-extra
 opkg install shadowsocks-libev-polarssl
 
 mkdir ~/download
