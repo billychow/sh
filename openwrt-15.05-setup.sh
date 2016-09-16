@@ -13,7 +13,8 @@ opkg install luci luci-ssl luci-app-ddns \
              diffutils \
              kmod-usb-core kmod-usb2 kmod-usb3 kmod-usb-storage kmod-usb-storage-extras \
              block-mount kmod-fs-ext4 kmod-fs-exfat kmod-fs-vfat luci-app-samba \
-             kmod-nf-nathelper-extra
+             kmod-nf-nathelper-extra \
+             luci-app-chinadns luci-app-shadowsocks shadowsocks-libev-polarssl
 opkg install shadowsocks-libev-polarssl
 
 mkdir ~/download
