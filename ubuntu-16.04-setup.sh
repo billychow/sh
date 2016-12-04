@@ -53,3 +53,6 @@ sudo mv proxy.pac /etc/proxy.pac
 rm -f gfwlist.txt
 dconf write /system/proxy/mode "'auto'"
 dconf write /system/proxy/autoconfig-url "'file:///etc/proxy.pac'"
+
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
