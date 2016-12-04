@@ -2,7 +2,7 @@
 
 set -x
 sudo apt-get -y update && sudo apt-get -y upgrade
-sudo apt-get -y install build-essential autoconf subversion git vim-gnome tmux screen proxychains privoxy \
+sudo apt-get -y install build-essential autoconf subversion git vim-gnome zsh tmux screen proxychains privoxy \
                                 p7zip-full rar unrar chromium-browser filezilla \
                                 indicator-multiload indicator-china-weather \
                                 ibus-table-wubi \
